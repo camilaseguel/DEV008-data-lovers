@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    align-items: normal;
+    
+}
+
+.img__logopokemon{
+    width: 450px;
+    height: 550px;
+    align-items: center;
+}
+
+.h1{
+    font-style: initial;
+    font-size: 35px;
+    font-family: sans-serif;
+    
+}
+
+.imagen__centralpokemon{
+    width: 350;
+    height: 300;
+}
+
+.footerproject{
+    font-style: normal;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+/*.nav{
+    font-size: 25px;
+    font-style:normal;
+    align-items: center;
+}
+*/
