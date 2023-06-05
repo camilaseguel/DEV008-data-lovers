@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+  </div>
 <!--Encabezado, logo pokemon-->
   <Header>
     <div class="imgstyle">
@@ -15,27 +24,27 @@
   </Header>
   <main>
 <!--Imagen central con pokemon-->
-    <h1 id="bienvenida" class="bienvenida">¡BIENVENIDO FUTURO MAESTRO POKEMON!</h1>
+    <h1 id="bienvenida" class="bienvenida">¡WELCOME POKEMON MASTER!</h1>
     <div id="imagen__central" class="imagen__central">
       <img id="imagen__centralpokemon" class="imagen__centralpokemon" src="imagenes/pokemones pra.generacion.jpg">
     </div>
 <!--menú de buscar, ordenar y filtrar-->
     <div id="search_filter_order" class="search_filter_order">
-      <input type="text" id="search_pokemon" Class="search_pokemon" placeholder="Buscar">
+      <input type="text" id="search_pokemon" Class="search_pokemon" placeholder="Search">
       <select id="filterType" class="filterType">
-        <option selected value="all">Tipo de Pokemon</option>
-        <option value="electric">Eléctrico</option>
-        <option value="fairy">Hada</option>
-        <option value="fighting">Luchador</option>
-        <option value="fire">Fuego</option>
-        <option value="flying">Volador</option>
-        <option value="grass">Planta</option>
-        <option value="ground">Tierra</option>
-        <option value="ice">Hielo</option>
-        <option value="poison">Venenoso</option>
-        <option value="psychic">Psíquico</option>
-        <option value="rock">Piedra</option>
-        <option value="water">Agua</option>
+        <option selected value="all">Type Pokemon</option>
+        <option value="electric">electric</option>
+        <option value="fairy">fairy</option>
+        <option value="fighting">fighting</option>
+        <option value="fire">fire</option>
+        <option value="flying">flying</option>
+        <option value="grass">grass</option>
+        <option value="ground">ground</option>
+        <option value="ice">ice</option>
+        <option value="poison">poison</option>
+        <option value="psychic">psychic</option>
+        <option value="rock">rock</option>
+        <option value="water">water</option>
       </select>
       <select id="filterGeneration" class="filterGeneration">
         <option selected value="all">Generación</option>
@@ -43,15 +52,13 @@
         <option value="generacioniikanto">Generación II. Johto</option>
       </select>
       <select id="order__a-z" class="order__a-z">
-        <option selected value="all">Ordenar</option>
+        <option selected value="all">Sort by</option>
         <option value="order__a-z">A-Z</option>
         <option value="order__z-a">Z-A</option>
-        <option value="order__+a-">de Mayor a Menor</option>
-        <option value="order__-a+">de Menor a Mayor</option>
       </select>
     </div>
 <!--Cartas animadas de Pokemon-->
-    <div id="cards" class="cards">
+    <div id="container_cards" class="container_cards">
       <!---div vacio-->
     </div>
   </main>
