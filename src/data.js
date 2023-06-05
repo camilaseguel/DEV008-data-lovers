@@ -5,13 +5,14 @@ import data from './data/pokemon/pokemon.js';
 //ACÁ VAN TODAS LAS FUNCIONES PARA MANIPULAR DATOS
 
 
-export const example = () => {
+/*export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
 };
+*/
 //Función que toma la información de la data.
 export function getData() {
   return data.pokemon
@@ -63,13 +64,25 @@ console.log(getPokemonTypeFlying);
 console.log(getPokemonTypeGround);
 
 //con bucle For, logro iterar buscando los nombres de cada pokemon
-for (let i = 0; i < result.length; i++) {
-  console.log(result[i].name);
-  console.log(result[i].num);
-  console.log(result[i].about);
-  console.log(result[i].img);
+export function searchpokemon(result) {
+ 
+  for (let i = 0; i < result.length; i++) {
+    console.log(result[i].name);
+    console.log(result[i].num);
+    console.log(result[i].about);
+    console.log(result[i].img);
+  }
 }
 
+function orderData(result) {
+  return a - b;
+  console.log(orderData);
+}
+
+/*let orderData = result.toSorted(result) => {
+  return a - b;
+
+}
 //const namePokemon = result.filter(item => item.type.includes("name"));
 //const numPokemon = result.filter(item => item.type.includes ("num"));
 
