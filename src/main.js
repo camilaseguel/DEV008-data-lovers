@@ -4,7 +4,10 @@ import { getData } from './data.js';
 import data from './data/pokemon/pokemon.js';
 import { searchPokemon } from './data.js';
 import { filterType } from './data.js';
+import { filterGeneration } from './data.js';
 import { sortData } from './data.js';
+
+/*import { sortData } from './data.js';*/
 //ACÁ VAN TODAS LAS INTERACCIONES CON EL DOM
 
 //const usersPokemon = document.getElementById("search_pokemon").addEventListener("click",(searchPokemon));

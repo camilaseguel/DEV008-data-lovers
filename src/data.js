@@ -24,7 +24,6 @@ console.log(result);
 export function filterType(result, typePokemon) {
   return result.filter(item => item.type.includes(typePokemon));
 }
-
 const getPokemonTypeFire = filterType(result, "fire");
 const getPokemonTypeGrass = filterType(result, "grass");
 const getPokemonTypePoison = filterType(result, "poison");
@@ -38,6 +37,7 @@ const getPokemonTypeRock = filterType(result, "rock");
 const getPokemonTypeFlying = filterType(result, "flying");
 const getPokemonTypeGround = filterType(result, "ground");
 
+/*
 console.log(getPokemonTypeFire);
 console.log(getPokemonTypeGrass);
 console.log(getPokemonTypePoison);
@@ -50,6 +50,16 @@ console.log(getPokemonTypeIce);
 console.log(getPokemonTypeRock);
 console.log(getPokemonTypeFlying);
 console.log(getPokemonTypeGround);
+*/
+//Función que filtra la data por generación de pokemon
+export function filterGeneration(result, generationPokemon) {
+  return result.filter(item => item.generation.name==generationPokemon);
+}
+const getPokemonGenerationI = filterGeneration(result,"kanto");
+const getPokemonGenerationII = filterGeneration(result,"johto");
+
+console.log(getPokemonGenerationI);
+console.log(getPokemonGenerationII);
 
 //con bucle For, logro iterar buscando los nombres de cada pokemon
 
@@ -69,32 +79,50 @@ export function searchPokemon(result) {
   console.log(namePokemon)
 }
 
+//Función que ordena la data alfabéticamente (nombre)
 export function sortData(result) {
-  result.sort((a, b) => {
+  result.sort((a,b) => {
     if (a.name < b.name) { //a menor que b
       return -1;
-    } else {
+    }
+    if (a.name > b.name) {
       return 1;
-    };
+    }
+    return 0;
   });
   return result;
 }
-console.log(sortData(result))
+// console.log(sortData(result));
 
-/*export function dataReverse(result){
-  result.sort((a,b) => {
-    if(a.name < b.name){ //a mmayor que b
-    return 1; 
-    } 
-  }); 
-  return result;
-}
-console.log(dataReverse(result))*/
-export function dataalreves(result) {
-  result.sort((a, b) => {
-    if (a.name > b.name) { //a menor que b
+/*export function sortDataZa(result) {
+  result.sort((b,a) => {
+    if (a.name < b.name) { //a menor que b
       return -1;
     }
-  }
-  )
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return result;
 }
+
+console.log(result.sort((a,b) => a.name.localeCompare(b.name)));
+console.log(result.sort((a,b) => b.name.localeCompare(a.name)));
+
+function dataZa(result){
+  const dataDescending = result.reverse();
+  return dataDescending;
+}
+console.log (dataZa(result));
+
+*/
+/*let keysArrays =Object.values(result);
+console.log(keysArrays)*/
+
+/*const mappedResult = Object.keys(result).map(key =>{
+  const value = result[key]
+  console.log(value.generation)
+})
+*/
+
