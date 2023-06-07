@@ -5,7 +5,7 @@ import data from './data/pokemon/pokemon.js';
 import { searchPokemon } from './data.js';
 import { filterType } from './data.js';
 import { filterGeneration } from './data.js';
-import { sortData } from './data.js';
+import { orderNameAscending } from './data.js';
 
 /*import { sortData } from './data.js';*/
 //ACÁ VAN TODAS LAS INTERACCIONES CON EL DOM
