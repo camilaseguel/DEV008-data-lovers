@@ -10,16 +10,22 @@ body {
   background-color: white;
 
 }
-
+.containerWelcome{
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-around;
+}
 .img__logopokemon {
   width: 450px;
   height: 550px;
   align-items: center;
+  filter:brightness(1.1);
+  mix-blend-mode:multiply;
 }
 
 h1 {
   font-style: initial;
-  font-size: 400%;
+  font-size: 500%;
   font-family:monospace;
 
 }
@@ -27,8 +33,19 @@ h1 {
 .imagen__centralpokemon {
   width: 350;
   height: 300;
+  filter:brightness(1.1);
+  mix-blend-mode:multiply;
 }
 
+.search_filter_order{
+  display:flex;
+  justify-content:center;
+  width:auto;
+  height:80px;
+  background-image: url(imagenes/cosmos-espacio-estrellas-naturaleza-wallpaper-preview.jpg);
+  cursor: pointer;
+  padding: 15px;
+}
 .footerproject {
   font-style: normal;
   font-size: 15px;
@@ -63,9 +80,10 @@ h1 {
   margin: 2%;
   padding: 1%;
   background-color: lightcyan;
-  font-size: 25px;
+  font-size: 20px;
+  align-items: center;
   font-style: normal;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
 
 }
 
