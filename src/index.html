@@ -6,20 +6,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-    </div>
-  
-  </div>
-<!--Encabezado, logo pokemon-->
+ <!--Encabezado, logo pokemon-->
   <div class="containerWelcome">
     <Header>
       <div class="imgstyle">
-       <img id="img__logopokemon" class="img__logopokemon" src="imagenes/Pokemon-Logo.jpg">
+       <img id="img__logopokemon" class="img__logopokemon" src="imagenes/logo.pokemon.jpg">
       </div>
    </Header>
   <main>
@@ -30,10 +21,11 @@
     </div>
   </div>
 <!--menú de buscar, ordenar y filtrar-->
-    <div id="search_filter_order" class="search_filter_order">
-      <input type="text" id="search_pokemon" Class="search_pokemon" placeholder="Search">
+  <form action="Form" id="filter_order" class="filter_order">
       <select id="filterType" class="filterType">
         <option selected value="all">Type Pokemon</option>
+        <option value="bug">bug</option>
+        <option value="dragon">dragon</option>
         <option value="electric">electric</option>
         <option value="fairy">fairy</option>
         <option value="fighting">fighting</option>
@@ -42,22 +34,29 @@
         <option value="grass">grass</option>
         <option value="ground">ground</option>
         <option value="ice">ice</option>
+        <option value="normal">normal</option>
         <option value="poison">poison</option>
         <option value="psychic">psychic</option>
         <option value="rock">rock</option>
         <option value="water">water</option>
       </select>
       <select id="filterGeneration" class="filterGeneration">
-        <option selected value="all">Generación</option>
-        <option value="generacionikanto">Generación I. Kanto</option>
-        <option value="generacioniikanto">Generación II. Johto</option>
+        <option selected value="all">Generation</option>
+        <option value="kanto">Kanto</option>
+        <option value="johto">Johto</option>
       </select>
-      <select id="order__a-z" class="order__a-z">
-        <option selected value="all">Sort by</option>
-        <option value="order__a-z">A-Z</option>
-        <option value="order__z-a">Z-A</option>
+      <select id="order__az" class="order__az">
+        <option selected value="all">Order for Name</option>
+        <option value="az">az</option>
+        <option value="za">za</option>
       </select>
-    </div>
+      <select id="order__num" class="order__num">
+        <option selected value="all">Order for Number</option>
+        <option value="0">Ascending</option>
+        <option value="1">Descending</option>
+      </select>
+      <p><button type="reset" id="cleanbttn"  class="cleanbttn">Clean Filters</button></p>
+  </form>
 <!--Cartas animadas de Pokemon-->
     <div id="container_cards" class="container_cards">
       <!---div vacio-->

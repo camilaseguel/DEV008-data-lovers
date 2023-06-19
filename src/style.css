@@ -7,17 +7,19 @@
 body {
   text-align: center;
   align-items: normal;
-  background-color: white;
+  background-color:darkblue;
 
 }
 .containerWelcome{
-  background-color:lightblue;
+  background-color:white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  image-rendering: auto;
 }
 .img__logopokemon {
-  width: 450px;
-  height: 550px;
+  width: 850px;
+  height: 450px;
   align-items: center;
   filter:brightness(1.1);
   mix-blend-mode:multiply;
@@ -37,27 +39,89 @@ h1 {
   mix-blend-mode:multiply;
 }
 
-.search_filter_order{
+.filter_order{
   display:flex;
+  flex-wrap: wrap;
   justify-content:center;
   width:auto;
-  height:80px;
-  background-image: url(imagenes/cosmos-espacio-estrellas-naturaleza-wallpaper-preview.jpg);
+  height:auto;
+  background-color: red;
   cursor: pointer;
   padding: 15px;
+  margin: 15px;
+  border:yellow 1px solid;
+  border-radius: 10px;
+}
+
+.filterType{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.filterGeneration{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.order__az{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.order__num{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cleanbttn{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: yellow 1px solid;
+  border-radius: 20px;
+  padding: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+
 }
 .footerproject {
   font-style: normal;
-  font-size: 15px;
-  font-family: sans-serif;
+  font-size: 40px;
+  color: white;
+  font-family: monospace;
+  border: 1px yellow solid;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: red;
 }
 
-/*.background{
-    border: black 1px solid;
-    border-radius: 5px;
-    height: 350px;
-}
-*/
 .container_cards {
   /* display: flexbox;
     flex-direction: column;
@@ -65,86 +129,120 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
 .container_cards>* {
   width: calc(88% / 3);
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border: grey 1px solid;
-  border-radius: 10px;
-  height: 550px;
-  margin: 2%;
-  padding: 1%;
-  background-color: lightcyan;
-  font-size: 20px;
+  position: relative;
+  height: 700px;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: whitesmoke;
   align-items: center;
   font-style: normal;
-  font-family: sans-serif;
-
+  font-size: 30px;
+  font-family: monospace;
+  justify-content: center;
+  
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
+.card .face {
+  position: absolute;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s;
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.card .front img {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  align-items: center;
+  align-content: center;
+  
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  text-align: center;
 }
 
-/*.nav{
-    font-size: 25px;
-    font-style:normal;
-    align-items: center;
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+} 
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+/*.container_cards .front{
+  transform: perspective(600px) rotateY('0deg');
+}
+.container_cards .front img {
+  width: 200px;
+  height: auto;
+}
+
+.container_cards .front h2{
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.container_cards .front h3{
+  font-size: 20px;
+  line-height: 2;
+  
+}
+
+.container_cards .back h3{
+  line-height: 1;
+}
+
+.container_cards .back p{
+  font-size: 18px;
+  line-height: 1;
+}
+
+.container_cards .back {
+  transform: perspective(600px) rotateY('180deg');
 }
 */
+
