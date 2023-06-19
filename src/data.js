@@ -1,93 +1,78 @@
 import data from './data/pokemon/pokemon.js';
-// estas funciones son de ejemplo
-
 
 //ACÁ VAN TODAS LAS FUNCIONES PARA MANIPULAR DATOS
 
-
-/*export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-*/
 //Función que toma la información de la data.
 export function getData() {
   return data.pokemon
 }
+
 //constante resultado, que hace referencia a mi función de tomar información de data.
 const result = getData();
-console.log(result);
+const sortDataName = [...result];
+const orderDataNum = [...result];
 
 //Función que filtra la data por tipo de pokemon
-function filterType(result, typePokemon) {
+export function filterType(result, typePokemon) {
   return result.filter(item => item.type.includes(typePokemon));
 }
 
-const getPokemonTypeFire = filterType(result, "fire");
+//Función que filtra la data por generación de pokemon
+export function filterGeneration(result, generationPokemon) {
+  return result.filter(item => item.generation.name === generationPokemon);
+}
+const getPokemonGenerationI = filterGeneration(result, "kanto");
+const getPokemonGenerationII = filterGeneration(result, "johto");
 
-const getPokemonTypeGrass = filterType(result, "grass");
 
-const getPokemonTypePoison = filterType(result, "poison");
+export function orderNameAscending(sortDataName,) {
+  sortDataName.sort((a, b) => {
+    if (a.name < b.name) { //a menor que b
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return sortDataName;
+} 
 
-const getPokemonTypeWater = filterType(result, "water");
-
-const getPokemonTypeElectric = filterType(result, "electric");
-
-const getPokemonTypeFighting = filterType(result, "fighting");
-
-const getPokemonTypeFairy = filterType(result, "fairy");
-
-const getPokemonTypePsychic = filterType(result, "psychic");
-
-const getPokemonTypeIce = filterType(result, "ice");
-
-const getPokemonTypeRock = filterType(result, "rock");
-
-const getPokemonTypeFlying = filterType(result, "flying");
-
-const getPokemonTypeGround = filterType(result, "ground");
-
-console.log(getPokemonTypeFire);
-console.log(getPokemonTypeGrass);
-console.log(getPokemonTypePoison);
-console.log(getPokemonTypeWater);
-console.log(getPokemonTypeElectric);
-console.log(getPokemonTypeFighting);
-console.log(getPokemonTypeFairy);
-console.log(getPokemonTypePsychic);
-console.log(getPokemonTypeIce);
-console.log(getPokemonTypeRock);
-console.log(getPokemonTypeFlying);
-console.log(getPokemonTypeGround);
-
-//con bucle For, logro iterar buscando los nombres de cada pokemon
-export function searchpokemon(result) {
+export function orderNameDescending(sortDataName) {
+  sortDataName.sort((a, b) => {
+    if (a.name > b.name) { //a menor que b
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return sortDataName;
+}
  
-  for (let i = 0; i < result.length; i++) {
-    console.log(result[i].name);
-    console.log(result[i].num);
-    console.log(result[i].about);
-    console.log(result[i].img);
-  }
+//ordenar por numero
+export function orderByNumber(orderDataNum) {
+  orderDataNum.sort((a, b) => {
+    if (Number(a.num) - Number(b.num)) { //a menor que b
+      return 1;
+    }
+    if (Number(a.num) - Number(b.num)) {
+      return -1;
+    }
+    return 0;
+  });
+  return orderDataNum;
 }
-
-function orderData(result) {
-  return a - b;
-  console.log(orderData);
+export function orderByNumberDes(orderDataNum) {
+  orderDataNum.sort((a, b) => {
+    if (Number(a.num) - Number(b.num)) { //a menor que b
+      return -1;
+    }
+    if (Number(a.num) - Number(b.num)) {
+      return 1;
+    }
+    return 0;
+  });
+  return orderDataNum;
 }
-
-/*let orderData = result.toSorted(result) => {
-  return a - b;
-
-}
-//const namePokemon = result.filter(item => item.type.includes("name"));
-//const numPokemon = result.filter(item => item.type.includes ("num"));
-
-
-/*for (var i = 0; i < data.lenght; i++){
-  console.log(pokemon);
-}
-*/

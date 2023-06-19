@@ -1,41 +1,214 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body{
-    text-align: center;
-    align-items: normal;
-    
+body {
+  text-align: center;
+  align-items: normal;
+  background-color:darkblue;
+
+}
+.containerWelcome{
+  background-color:white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  image-rendering: auto;
+}
+.img__logopokemon {
+  width: 850px;
+  height: 450px;
+  align-items: center;
+  filter:brightness(1.1);
+  mix-blend-mode:multiply;
 }
 
-.img__logopokemon{
-    width: 450px;
-    height: 550px;
-    align-items: center;
+h1 {
+  font-style: initial;
+  font-size: 500%;
+  font-family:monospace;
+
 }
 
-.h1{
-    font-style: initial;
-    font-size: 35px;
-    font-family: sans-serif;
-    
+.imagen__centralpokemon {
+  width: 350;
+  height: 300;
+  filter:brightness(1.1);
+  mix-blend-mode:multiply;
+  image-orientation: center;
 }
 
-.imagen__centralpokemon{
-    width: 350;
-    height: 300;
+.filter_order{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  width:auto;
+  height:auto;
+  background-color: red;
+  cursor: pointer;
+  padding: 15px;
+  margin: 15px;
+  border:yellow 1px solid;
+  border-radius: 10px;
 }
 
-.footerproject{
-    font-style: normal;
-    font-size: 15px;
-    font-family: sans-serif;
+.filterType{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-/*.nav{
-    font-size: 25px;
-    font-style:normal;
-    align-items: center;
+
+.filterGeneration{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-*/
+
+.orderName{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.orderNumber{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cleanbttn{
+  font-size: 40px;
+  font-family:monospace;
+  font-style:normal;
+  padding: auto;
+  border: yellow 1px solid;
+  border-radius: 20px;
+  padding: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+
+}
+.footerproject {
+  color: #f3f3f3;
+  font-style: normal;
+  font-size: 40px;
+  font-family: sans-serif;
+  border: yellow 5px solid;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 15px;
+  background-color: red;
+
+}
+
+.container_cards {
+  /* display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container_cards>* {
+  width: calc(88% / 3);
+}
+
+.card {
+  position: relative;
+  height: 700px;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: monospace;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  align-items: center;
+  align-content: center;
+  
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+} 
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
