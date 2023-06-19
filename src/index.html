@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PokéDex</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <header> 
-    <h1>PokéDex</h1>
-  </header>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers. Pokemon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <!--Encabezado, logo pokemon-->
+  <div class="containerWelcome">
+    <Header>
+      <div class="imgstyle">
+       <img id="img__logopokemon" class="img__logopokemon" src="imagenes/logo.pokemon.jpg">
+      </div>
+   </Header>
+  <main>
+<!--Imagen central con pokemon-->
+    <h1 id="bienvenida" class="bienvenida">¡WELCOME POKEMON MASTER!</h1>
+    <div id="imagen__central" class="imagen__central">
+      <img id="imagen__centralpokemon" class="imagen__centralpokemon" src="imagenes/pokemones pra.generacion.jpg">
+    </div>
+  </div>
+<!--menú de buscar, ordenar y filtrar-->
+  <form action="Form" id="filter_order" class="filter_order">
+      <select id="filterType" class="filterType">
+        <option selected value="all">Type Pokemon</option>
+        <option value="bug">bug</option>
+        <option value="dragon">dragon</option>
+        <option value="electric">electric</option>
+        <option value="fairy">fairy</option>
+        <option value="fighting">fighting</option>
+        <option value="fire">fire</option>
+        <option value="flying">flying</option>
+        <option value="grass">grass</option>
+        <option value="ground">ground</option>
+        <option value="ice">ice</option>
+        <option value="normal">normal</option>
+        <option value="poison">poison</option>
+        <option value="psychic">psychic</option>
+        <option value="rock">rock</option>
+        <option value="water">water</option>
+      </select>
+      <select id="filterGeneration" class="filterGeneration">
+        <option selected value="all">Generation</option>
+        <option value="kanto">Kanto</option>
+        <option value="johto">Johto</option>
+      </select>
+      <select id="order__az" class="order__az">
+        <option selected value="all">Order for Name</option>
+        <option value="az">az</option>
+        <option value="za">za</option>
+      </select>
+      <select id="order__num" class="order__num">
+        <option selected value="all">Order for Number</option>
+        <option value="0">Ascending</option>
+        <option value="1">Descending</option>
+      </select>
+      <p><button type="reset" id="cleanbttn"  class="cleanbttn">Clean Filters</button></p>
+  </form>
+<!--Cartas animadas de Pokemon-->
+    <div id="container_cards" class="container_cards">
+      <!---div vacio-->
+    </div>
+  </main>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+<footer id="footerproject" class="footerproject"><b>copyright, 2023. Camila Seguel-Mixi Cruz.</b></footer>
 
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
 </html>
