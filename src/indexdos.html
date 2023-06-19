@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers. Pokemon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <Header>
+    <div class="imgstyle">
+      <img src="imagenes/Pokemon-Logo.jpg">
+    </div>
+  </Header>
+  <main>
+    <nav class="nav">
+      <ul class="nav-section">
+        <li class="nav-item">Buscar <input type="text" class="search" id="search"></li>
+        <li class="nav-item">Filtrar<br />
+          <input type="radio" class="filter" id="filtertype">Tipo<br />
+          <input type="radio" class="filter" id="filtergeneration">Generación<br />
+        </li>
+        <li class="nav-item">Ordenar<br />
+          <input type="radio" class="order" id="order">de Mayor a Menor<br />
+          <input type="radio" class="order" id="order">de Menor a Mayor<br />
+          <input type="radio" class="order" id="order">de a-z<br />
+          <input type="radio" class="order" id="order">de z-a<br />
+        </li>
+      </ul>
+      <button type="button" id="buttonSearch">¡IR!</button>
+    </nav>
+  </main>
+  <main>
+    <div class="container">
+      <h2>Catálogo Pokemon</h2>
+    </div>
+  </main>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+<footer><b>Laboratoria:Dev008,2023. Proyecto N°2: Data Lovers. Camila Seguel-Mixi Cruz.</b></footer>
+
+</html>

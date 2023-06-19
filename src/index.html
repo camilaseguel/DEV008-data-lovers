@@ -1,16 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PokéDex</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <header> 
-    <h1>PokéDex</h1>
-  </header>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers. Pokemon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<<<<<<< HEAD
+=======
+  <div id="myModal" class="modal">
 
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+>>>>>>> main
+  </div>
+<!--Encabezado, logo pokemon-->
+  <div class="containerWelcome">
+    <Header>
+      <div class="imgstyle">
+       <img id="img__logopokemon" class="img__logopokemon" src="imagenes/Logo-Pokemon.jpg">
+      </div>
+   </Header>
+  <main>
+<!--Imagen central con pokemon-->
+    <h1 id="bienvenida" class="bienvenida">¡WELCOME POKEMON MASTER!</h1>
+    <div id="imagen__central" class="imagen__central">
+      <img id="imagen__centralpokemon" class="imagen__centralpokemon" src="imagenes/pokemones pra.generacion.jpg">
+    </div>
+  </div>
+<!--menú de buscar, ordenar y filtrar-->
+<<<<<<< HEAD
+    <div id="filter_order" class="filter_order">
+      <select id="filterType" class="filterType">
+        <option selected value="all">Type Pokemon</option>
+        <option value="electric">Electric</option>
+        <option value="fairy">Fairy</option>
+        <option value="fighting">Fighting</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="grass">Grass</option>
+        <option value="ground">Ground</option>
+        <option value="ice">Ice</option>
+        <option value="poison">Poison</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="water">Water</option>
+=======
+    <div id="search_filter_order" class="search_filter_order">
+      <input type="text" id="search_pokemon" Class="search_pokemon" placeholder="Search">
+      <select id="filterType" class="filterType">
+        <option selected value="all">Type Pokemon</option>
+        <option value="electric">electric</option>
+        <option value="fairy">fairy</option>
+        <option value="fighting">fighting</option>
+        <option value="fire">fire</option>
+        <option value="flying">flying</option>
+        <option value="grass">grass</option>
+        <option value="ground">ground</option>
+        <option value="ice">ice</option>
+        <option value="poison">poison</option>
+        <option value="psychic">psychic</option>
+        <option value="rock">rock</option>
+        <option value="water">water</option>
+>>>>>>> main
+      </select>
+      <select id="filterGeneration" class="filterGeneration">
+        <option selected value="all">Generation</option>
+        <option value="kanto">Generation I. Kanto</option>
+        <option value="johto">Generation II. Johto</option>
+      </select>
+<<<<<<< HEAD
+      <select id="orderName" class="orderName">
+        <option selected value="all">Order for Name</option>
+        <option value="az">Ordenar A-Z</option>
+        <option value="za">Ordenar Z-A</option>
+=======
+      <select id="order__a-z" class="order__a-z">
+        <option selected value="all">Sort by</option>
+        <option value="order__a-z">A-Z</option>
+        <option value="order__z-a">Z-A</option>
+>>>>>>> main
+      </select>
+      <select id="orderNumber" class="orderNumber">
+          <option selected value="all">Order for Number</option>
+          <option value="0">1-250</option>
+          <option value="250">251-1</option>
+        </select>    
+      <button id="cleanbttn"  class="cleanbttn">Clean Filters</button>
+    </div>
+<!--Cartas animadas de Pokemon-->
+    <div id="container_cards" class="container_cards">
+      <!---div vacio-->
+    </div>
+  </main>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+<footer id="footerproject" class="footerproject"><b>copyright, 2023. Camila Seguel-Mixi Cruz.</b></footer>
+
 </html>
