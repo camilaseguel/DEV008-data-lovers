@@ -326,7 +326,6 @@ describe('deberia ordenar número descendente', () => {
     const numDescendente = ((a, b) => { return (b - a) });
 
     expect(orderByNumberDes(listaPokemon, numDescendente)).toEqual([{
-
       name: "togepy",
       num: 175,
       type: "fairy",
